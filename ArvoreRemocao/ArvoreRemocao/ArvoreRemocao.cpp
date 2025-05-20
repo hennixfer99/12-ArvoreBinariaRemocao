@@ -246,37 +246,16 @@ void removerElementoArvore(NO* no, int valor) {
 		return;
 	}
 
-	else {
-        // Caso 1: Nó sem filhos (folha)
-        if(no->dir == NULL && no->esq == NULL){
-            delete no;
-            return NULL;
-        }
-        // Caso 2: Nó com apenas um filho
-        else if(no->dir == NULL || no->esq == NULL){
-            NO* aux;
-            if(no->esq != NULL) {
-                aux = no->esq;
-            } else {
-                aux = no->dir;
-            }
-            delete no;
-            return aux;
-        }
-        // Caso 3: Nó com dois filhos
-        else {
-            NO* aux = no->dir;
-            while(aux->esq != NULL) {
-                aux = aux->esq;
-            }
-            
-            
-            no->valor = aux->valor;
-            
-            no->dir = removerArvore(no->dir, aux->valor);
-        }   
-     
-    }
+
+	// caso 1: sem filhos	
+	
+
+	// caso 2: um filho	
+	
+
+	// caso 3: dois filhos
+
+	// procura o elmento mais a esquerda da sub-arvore da direita
 	NO* sucessor = atual->dir;
 	NO* paiSucessor = atual;
 	while (sucessor->esq != NULL) {
